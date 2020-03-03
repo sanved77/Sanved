@@ -504,6 +504,30 @@ img.svg{
 /*	03) ARLO ABOUT
 /*---------------------------------------------------*/
 
+.skill_bubble{
+	display:inline-block;
+	border-radius: 18px;
+	background: #36abb5;
+	padding: 8px;
+	margin: 5px;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+	min-width: 60px;
+	font-family: "Montserrat";
+	color: #fff;
+}
+
+.blue_bubble .skill_bubble{
+	background: #ffb554;
+	color: #000;
+}
+
+.skill_bubble_container{
+	box-sizing: border-box;
+	margin:6px 0 20px 0;
+}
+
 .arlo_tm_title_holder{
 	width: 100%;
 	height: auto;
