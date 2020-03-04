@@ -504,7 +504,14 @@ img.svg{
 /*	03) ARLO ABOUT
 /*---------------------------------------------------*/
 
+.smallscreen_image{
+	box-sizing: border-box;
+	padding-bottom: 30px;
+	display: none;
+}
+
 .skill_bubble{
+	box-sizing: border-box;
 	display:inline-block;
 	border-radius: 18px;
 	background: #36abb5;
@@ -518,6 +525,11 @@ img.svg{
 	color: #fff;
 }
 
+.skill_bubble:hover{
+	border: 3px solid #000;
+	padding:5px;
+}
+
 .blue_bubble .skill_bubble{
 	background: #ffb554;
 	color: #000;
@@ -525,7 +537,7 @@ img.svg{
 
 .skill_bubble_container{
 	box-sizing: border-box;
-	margin:6px 0 20px 0;
+	margin:6px 0 30px 0;
 }
 
 .arlo_tm_title_holder{
@@ -848,22 +860,22 @@ img.svg{
 }
 .arlo_tm_skills_wrap .inner_wrap{display: flex;}
 .arlo_tm_skills_wrap .leftbox{
-	width: 35%;
+	width: 50%;
 	height: auto;
 	clear: both;
 	float: left;
-	padding-right:0px;
+	padding-right:20px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
 .arlo_tm_skills_wrap .rightbox{
-	width: 65%;
+	width: 50%;
 	height: auto;
 	clear: both;
 	float: right;
-	padding-left: 65px;
+	padding-left: 20px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1486,6 +1498,9 @@ img.svg{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+.arlo_tm_news_wrap .news_image_full{
+	display:none;
 }
 .arlo_tm_news_wrap .date_wrap{margin-bottom: 16px;}
 .arlo_tm_news_wrap .date_wrap p{
@@ -2573,6 +2588,7 @@ img.svg{
 	#arlo_tm_popup_blog .close{right: 0px;}
 	.arlo_tm_list_wrap > ul.total > li{width: 50%;}
 	.arlo_tm_about_wrap .leftbox{display: none;}
+	.smallscreen_image{display: block;}
 	.arlo_tm_about_wrap .rightbox{padding-left: 0px;width: 100%;}
 	.arlo_tm_contact_wrap_all .leftbox{width: 100%;padding-right: 0px;margin-bottom: 19px;}
 	.arlo_tm_contact_wrap_all .rightbox{width: 100%;float: none;}
@@ -2583,7 +2599,7 @@ img.svg{
 	.arlo_tm_about_wrap .leftpart{width: 100%;padding-right: 0px;margin-bottom: 60px;}
 	.arlo_tm_about_wrap .rightpart{width: 100%;}
 	.arlo_tm_skills_wrap .inner_wrap{flex-direction: column;}
-	.arlo_tm_skills_wrap .leftbox{padding-right: 0px;width: 100%;margin-bottom: 60px;}
+	.arlo_tm_skills_wrap .leftbox{padding-right: 0px;width: 100%;}
 	.arlo_tm_skills_wrap .rightbox{width: 100%;padding-left: 0px;}
 	.arlo_tm_main_demos_list_wrap ul{margin: 0px;}
 	.arlo_tm_main_demos_list_wrap ul li{width: 100%;padding: 0px;}

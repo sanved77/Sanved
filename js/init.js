@@ -535,7 +535,9 @@ function arlo_tm_popup_blog(){
 		var button		= element.find('.read_more a,.title_holder a,.link_news');
 		var html		= element.html();
 		var mainImage	= element.find('.news_image');
+		var fullImage	= element.find('.news_image_full');
 		var imgData		= mainImage.data('url');
+		var fullImageData		= fullImage.data('url');
 		var title		= element.find('.title_holder h3');
 		var titleHref	= element.find('.title_holder h3 a').html();
 		
@@ -544,7 +546,7 @@ function arlo_tm_popup_blog(){
 			popupBox.addClass('opened');
 			popupInner.html(html);
 			mainImage = popupInner.find('.news_image');
-			mainImage.css({backgroundImage: 'url('+imgData+')'});
+			mainImage.css({backgroundImage: 'url('+fullImageData+')'});
 			title = popupInner.find('.title_holder h3');
 			title.html(titleHref);
 			return false;
