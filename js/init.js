@@ -532,7 +532,8 @@ function arlo_tm_popup_blog(){
 	
 	li.each(function(){
 		var element		= jQuery(this);
-		var button		= element.find('.read_more a,.title_holder a,.link_news');
+		// var button		= element.find('.read_more a,.title_holder a,.link_news');
+		var button		= element.find('.read_more a, .link_news');
 		var html		= element.html();
 		var mainImage	= element.find('.news_image');
 		var fullImage	= element.find('.news_image_full');
