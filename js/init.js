@@ -9,45 +9,45 @@ jQuery(document).ready(function () {
 
   // here all ready functions
 
-  sdt_tm_responsive();
-  sdt_tm_imgtosvg();
-  sdt_tm_magnific_popup();
-  sdt_tm_jarallax();
-  sdt_tm_list_height();
-  sdt_tm_portfolio();
-  sdt_tm_anchor();
-  sdt_tm_contact_form();
-  sdt_tm_owl_carousel();
-  sdt_tm_animate_text();
-  sdt_tm_projects();
-  sdt_tm_miniboxes();
-  sdt_tm_isotope();
-  sdt_tm_totop();
-  sdt_tm_totop_myhide();
-  sdt_tm_animate_text();
-  sdt_tm_popup_blog();
-  sdt_tm_popupscroll();
-  sdt_tm_about_animation();
-  sdt_tm_kenburn_slider();
-  sdt_tm_ripple();
-  sdt_tm_switcher();
-  sdt_tm_data_images();
-  sdt_tm_hamburger();
+  responsive();
+  imgtosvg();
+  magnific_popup();
+  jarallax();
+  list_height();
+  portfolio();
+  anchor();
+  contact_form();
+  owl_carousel();
+  animate_text();
+  projects();
+  miniboxes();
+  isotope();
+  totop();
+  totop_myhide();
+  animate_text();
+  popup_blog();
+  popupscroll();
+  about_animation();
+  kenburn_slider();
+  ripple();
+  switcher();
+  data_images();
+  hamburger();
 
   jQuery(window).on("scroll", function () {
     //e.preventDefault();
-    sdt_tm_totop_myhide();
+    totop_myhide();
   });
 
   jQuery(window).on("resize", function () {
-    sdt_tm_miniboxes();
-    sdt_tm_isotope();
-    sdt_tm_responsive();
+    miniboxes();
+    isotope();
+    responsive();
   });
 
   jQuery(window).load("body", function () {
     setTimeout(function () {
-      jQuery(".sdt_tm_preloader").addClass("loaded");
+      jQuery(".preloader").addClass("loaded");
     }, 1000);
   });
 });
@@ -60,7 +60,7 @@ jQuery(document).ready(function () {
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-function sdt_tm_imgtosvg() {
+function imgtosvg() {
   "use strict";
 
   jQuery("img.svg").each(function () {
@@ -94,11 +94,11 @@ function sdt_tm_imgtosvg() {
 // --------------    RESPONSIVE    ---------------------
 // -----------------------------------------------------
 
-function sdt_tm_responsive() {
+function responsive() {
   "use strict";
 
-  var leftpart = jQuery(".sdt_tm_leftpart_wrap");
-  var rightpart = jQuery(".sdt_tm_rightpart");
+  var leftpart = jQuery(".leftpart_wrap");
+  var rightpart = jQuery(".rightpart");
   var WW = jQuery(window).width();
 
   if (WW < 1040) {
@@ -114,7 +114,7 @@ function sdt_tm_responsive() {
 // --------------    MAGNIFIC POPUP    -----------------
 // -----------------------------------------------------
 
-function sdt_tm_magnific_popup() {
+function magnific_popup() {
   "use strict";
 
   jQuery(".open-popup-link").magnificPopup({
@@ -162,7 +162,7 @@ function sdt_tm_magnific_popup() {
 // --------------------    JARALLAX    -----------------
 // -----------------------------------------------------
 
-function sdt_tm_jarallax() {
+function jarallax() {
   "use strict";
 
   jQuery(".jarallax").each(function () {
@@ -186,7 +186,7 @@ function sdt_tm_jarallax() {
 // ---------    PERSONAL LIST HEIGHT    ------------
 // -------------------------------------------------
 
-function sdt_tm_list_height() {
+function list_height() {
   "use strict";
 
   var div = jQuery(".about_short_contact_wrap");
@@ -201,13 +201,13 @@ function sdt_tm_list_height() {
 
 // filterable
 
-function sdt_tm_portfolio() {
+function portfolio() {
   "use strict";
 
   if (jQuery().isotope) {
     // Needed variables
-    var list = jQuery(".sdt_tm_portfolio_list");
-    var filter = jQuery(".sdt_tm_portfolio_filter");
+    var list = jQuery(".portfolio_list");
+    var filter = jQuery(".portfolio_filter");
 
     if (filter.length) {
       // Isotope Filter
@@ -234,26 +234,26 @@ function sdt_tm_portfolio() {
   }
 }
 
-function sdt_tm_projects() {
+function projects() {
   "use strict";
 
-  jQuery(".sdt_tm_portfolio_animation_wrap").each(function () {
+  jQuery(".portfolio_animation_wrap").each(function () {
     jQuery(this)
       .on("mouseenter", function () {
         if (jQuery(this).data("title")) {
-          jQuery(".sdt_tm_portfolio_titles").html(jQuery(this).data("title") + '<span class="work__cat">' + jQuery(this).data("category") + "</span>");
-          jQuery(".sdt_tm_portfolio_titles").addClass("visible");
+          jQuery(".portfolio_titles").html(jQuery(this).data("title") + '<span class="work__cat">' + jQuery(this).data("category") + "</span>");
+          jQuery(".portfolio_titles").addClass("visible");
         }
 
         jQuery(document).on("mousemove", function (e) {
-          jQuery(".sdt_tm_portfolio_titles").css({
+          jQuery(".portfolio_titles").css({
             left: e.clientX - 10,
             top: e.clientY + 25,
           });
         });
       })
       .on("mouseleave", function () {
-        jQuery(".sdt_tm_portfolio_titles").removeClass("visible");
+        jQuery(".portfolio_titles").removeClass("visible");
       });
   });
 }
@@ -262,7 +262,7 @@ function sdt_tm_projects() {
 // ------------    ANCHOR NAVIGATION    ----------------
 // -----------------------------------------------------
 
-function sdt_tm_anchor() {
+function anchor() {
   "use strict";
 
   jQuery(".anchor_nav").onePageNav();
@@ -286,7 +286,7 @@ function sdt_tm_anchor() {
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
 
-function sdt_tm_contact_form() {
+function contact_form() {
   "use strict";
 
   jQuery(".contact_form #send_message").on("click", function () {
@@ -325,10 +325,10 @@ function sdt_tm_contact_form() {
 // --------------------    OWL CAROUSEL    -------------
 // -----------------------------------------------------
 
-function sdt_tm_owl_carousel() {
+function owl_carousel() {
   "use strict";
 
-  var carousel = jQuery(".sdt_tm_services_wrap .owl-carousel");
+  var carousel = jQuery(".services_wrap .owl-carousel");
   carousel.owlCarousel({
     loop: true,
     items: 3,
@@ -351,18 +351,18 @@ function sdt_tm_owl_carousel() {
     },
   });
 
-  jQuery(".sdt_tm_services_wrap .custom_nav > a.prev").on("click", function () {
+  jQuery(".services_wrap .custom_nav > a.prev").on("click", function () {
     carousel.trigger("prev.owl.carousel");
     return false;
   });
 
-  jQuery(".sdt_tm_services_wrap .custom_nav > a.next").on("click", function () {
+  jQuery(".services_wrap .custom_nav > a.next").on("click", function () {
     carousel.trigger("next.owl.carousel");
     return false;
   });
-  sdt_tm_imgtosvg();
+  imgtosvg();
 
-  var carusel2 = jQuery(".sdt_tm_testimonial_wrap .owl-carousel");
+  var carusel2 = jQuery(".testimonial_wrap .owl-carousel");
   carusel2.owlCarousel({
     loop: true,
     autoplay: false,
@@ -385,19 +385,19 @@ new WOW().init();
 function tdProgress(container) {
   "use strict";
 
-  container.find(".sdt_tm_progress").each(function (i) {
+  container.find(".progress").each(function (i) {
     var progress = jQuery(this);
     var pValue = parseInt(progress.data("value"), 10);
     var pColor = progress.data("color");
-    var pBarWrap = progress.find(".sdt_tm_bar_wrap");
-    var pBar = progress.find(".sdt_tm_bar");
+    var pBarWrap = progress.find(".bar_wrap");
+    var pBar = progress.find(".bar");
     pBar.css({ width: pValue + "%", backgroundColor: pColor });
     setTimeout(function () {
       pBarWrap.addClass("open");
     }, i * 500);
   });
 }
-jQuery(".sdt_tm_progress_wrap").each(function () {
+jQuery(".progress_wrap").each(function () {
   "use strict";
   var pWrap = jQuery(this);
   pWrap.waypoint({
@@ -412,14 +412,14 @@ jQuery(".sdt_tm_progress_wrap").each(function () {
 // -----------------    MINI BOXES    ------------------
 // -----------------------------------------------------
 
-function sdt_tm_miniboxes() {
+function miniboxes() {
   "use strict";
 
-  var el = jQuery(".sdt_tm_miniboxes");
+  var el = jQuery(".miniboxes");
 
   if (el.length) {
     el.each(function (index, element) {
-      var child = jQuery(element).find(".sdt_tm_minibox");
+      var child = jQuery(element).find(".minibox");
 
       child.css({ height: "auto" });
       // Get an array of all element heights
@@ -447,7 +447,7 @@ function sdt_tm_miniboxes() {
 // --------------    ISOTOPE MASONRY    ----------------
 // -----------------------------------------------------
 
-function sdt_tm_isotope() {
+function isotope() {
   "use strict";
 
   jQuery(".masonry").isotope({
@@ -460,20 +460,20 @@ function sdt_tm_isotope() {
 // --------------------    TOTOP    --------------------
 // -----------------------------------------------------
 
-function sdt_tm_totop() {
+function totop() {
   "use strict";
 
-  jQuery(".sdt_tm_totop").on("click", function (e) {
+  jQuery(".totop").on("click", function (e) {
     e.preventDefault();
     jQuery("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 }
 
-function sdt_tm_totop_myhide() {
+function totop_myhide() {
   "use strict";
 
-  var toTop = jQuery(".sdt_tm_totop");
+  var toTop = jQuery(".totop");
   if (toTop.length) {
     var topOffSet = toTop.offset().top;
 
@@ -488,10 +488,10 @@ function sdt_tm_totop_myhide() {
 // -------------   ANIMATE TEXT  -------------------
 // -------------------------------------------------
 
-function sdt_tm_animate_text() {
+function animate_text() {
   "use strict";
 
-  var animateSpan = jQuery(".sdt_tm_animation_text_word");
+  var animateSpan = jQuery(".animation_text_word");
 
   animateSpan.typed({
     strings: ["a Software Developer", "an Android Developer", "a Node Developer", "a React Developer", "a Vue Developer"],
@@ -505,10 +505,10 @@ function sdt_tm_animate_text() {
 // -------------------    POPUP BLOG    ----------------
 // -----------------------------------------------------
 
-function sdt_tm_popup_blog() {
+function popup_blog() {
   "use strict";
-  var li = jQuery(".sdt_tm_list_wrap.blog_list .inner_list");
-  var popupBox = jQuery("#sdt_tm_popup_blog");
+  var li = jQuery(".list_wrap.blog_list .inner_list");
+  var popupBox = jQuery("#popup_blog");
   var popupInner = popupBox.find(".inner_popup");
   var closePopup = popupBox.find(".close");
 
@@ -546,13 +546,13 @@ function sdt_tm_popup_blog() {
 // -------------    WIDGET MENU SCROLL -----------------
 // -----------------------------------------------------
 
-function sdt_tm_popupscroll() {
+function popupscroll() {
   "use strict";
 
   var H = jQuery(window).height();
   var scrollable = jQuery(".scrollable");
 
-  var popupBox = jQuery(".sdt_tm_popup_blog .inner_popup");
+  var popupBox = jQuery(".popup_blog .inner_popup");
 
   popupBox.css({ height: H - 100 });
 
@@ -575,11 +575,11 @@ function sdt_tm_popupscroll() {
 // -------------  SLIDER KENBURN  ------------------
 // -------------------------------------------------
 
-function sdt_tm_kenburn_slider() {
+function kenburn_slider() {
   "use strict";
 
   jQuery(function () {
-    jQuery(".sdt_tm_hero_header_wrap .overlay_slider").vegas({
+    jQuery(".hero_header_wrap .overlay_slider").vegas({
       timer: false,
       animation: ["kenburnsUp", "kenburnsLeft", "kenburnsRight"],
       delay: 7000,
@@ -593,7 +593,7 @@ function sdt_tm_kenburn_slider() {
 // -------------  RIPPLE  --------------------------
 // -------------------------------------------------
 
-function sdt_tm_ripple() {
+function ripple() {
   "use strict";
 
   jQuery("#ripple").ripples({
@@ -612,13 +612,13 @@ function sdt_tm_ripple() {
 // -----------------    SWITCHER    --------------------
 // -----------------------------------------------------
 
-function sdt_tm_switcher() {
+function switcher() {
   "use strict";
 
-  var switcherOpener = jQuery(".sdt_tm_resize");
-  var switcherIcon = jQuery(".sdt_tm_leftpart_wrap .sdt_tm_resize i");
-  var leftPart = jQuery(".sdt_tm_leftpart_wrap");
-  var rightPart = jQuery(".sdt_tm_rightpart");
+  var switcherOpener = jQuery(".resize");
+  var switcherIcon = jQuery(".leftpart_wrap .resize i");
+  var leftPart = jQuery(".leftpart_wrap");
+  var rightPart = jQuery(".rightpart");
 
   switcherOpener.on("click", function () {
     if (switcherOpener.hasClass("opened")) {
@@ -645,7 +645,7 @@ function sdt_tm_switcher() {
     if (jQuery(".jarallax").length) {
       jQuery(".jarallax").jarallax("destroy");
       setTimeout(function () {
-        sdt_tm_jarallax();
+        jarallax();
       }, 300);
     }
     return false;
@@ -656,7 +656,7 @@ function sdt_tm_switcher() {
 // -------------------    COUNTER    -------------------
 // -----------------------------------------------------
 
-jQuery(".sdt_tm_counter").each(function () {
+jQuery(".counter").each(function () {
   "use strict";
 
   var el = jQuery(this);
@@ -679,7 +679,7 @@ jQuery(".sdt_tm_counter").each(function () {
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
 
-function sdt_tm_data_images() {
+function data_images() {
   "use strict";
 
   var data = jQuery("*[data-img-url]");
@@ -695,7 +695,7 @@ function sdt_tm_data_images() {
 // -------------    PARALLAX ANIMATION    --------------
 // -----------------------------------------------------
 
-function sdt_tm_about_animation() {
+function about_animation() {
   "use strict";
 
   if ($(".parallax").length > 0) {
@@ -713,11 +713,11 @@ function sdt_tm_about_animation() {
 // ---------------  HAMBURGER  -------------------------
 // -----------------------------------------------------
 
-function sdt_tm_hamburger() {
+function hamburger() {
   "use strict";
 
   var hamburger = jQuery(".hamburger");
-  var mobileMenu = jQuery(".sdt_tm_mobile_menu_wrap");
+  var mobileMenu = jQuery(".mobile_menu_wrap");
 
   hamburger.on("click", function () {
     var element = jQuery(this);
